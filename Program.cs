@@ -11,6 +11,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>().AddRoles<IdentityRole>().Add
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
 app.UseStatusCodePages();
@@ -23,5 +26,8 @@ app.UseAuthorization();
 app.MapDefaultControllerRoute();
 
 app.MapRazorPages();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
