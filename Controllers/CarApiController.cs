@@ -5,8 +5,8 @@ using aspnet3.Data;
 
 namespace aspnet3.Controllers
 {
-    [Route("api")]
     [ApiController]
+    [Route("api/car")]
     public class CarApiController : Controller
     {
         private readonly CarServiceContext dbContext;
